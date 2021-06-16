@@ -23,6 +23,7 @@
 		246DDAA32679F02900057B83 /* EditingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA22679F02900057B83 /* EditingMode.swift */; };
 		246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA42679F0E100057B83 /* TypeAliases.swift */; };
 		246DDAA9267A093800057B83 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA8267A093800057B83 /* CoreDataHelpers.swift */; };
+		246DDAAD267A25C100057B83 /* LoggedInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAAC267A25C100057B83 /* LoggedInController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		246DDAA22679F02900057B83 /* EditingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingMode.swift; sourceTree = "<group>"; };
 		246DDAA42679F0E100057B83 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeAliases.swift; path = ../../Chesstrainer2/ChessTrainer2/TypeAliases.swift; sourceTree = "<group>"; };
 		246DDAA8267A093800057B83 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		246DDAAC267A25C100057B83 /* LoggedInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				246DDA962679EA6400057B83 /* LogInController.swift */,
 				246DDA982679EA7500057B83 /* RegisterController.swift */,
 				246DDA9F2679EF0100057B83 /* TabbarController.swift */,
+				246DDAAC267A25C100057B83 /* LoggedInController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				246DDAA02679EF0100057B83 /* TabbarController.swift in Sources */,
 				246DDAA9267A093800057B83 /* CoreDataHelpers.swift in Sources */,
 				246DDA992679EA7500057B83 /* RegisterController.swift in Sources */,
+				246DDAAD267A25C100057B83 /* LoggedInController.swift in Sources */,
 				246DDA9D2679EAA800057B83 /* IDs2.swift in Sources */,
 				246DDA9E2679EAA800057B83 /* ControllerHelpers2.swift in Sources */,
 				246DDAA32679F02900057B83 /* EditingMode.swift in Sources */,

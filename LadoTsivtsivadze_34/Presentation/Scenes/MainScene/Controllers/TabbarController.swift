@@ -11,19 +11,27 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      
+//        if let logInController = selectedViewController as? LogInController {
+//            if let loggedInUser = LocalManager.shared.loggedInUser {
+//                print("go to profile page or show something")
+//            }
+//            else {
+//                print("else block")
+//            }
+//        }
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension TabbarController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 1 {
+            if let loggedInUser = LocalManager.shared.loggedInUser {
+                print("go to profile page or show something")
+            }
+            else {
+                print("else block")
+            }
+        }
     }
-    */
-
 }

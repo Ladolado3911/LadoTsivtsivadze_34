@@ -218,10 +218,49 @@
             </objects>
             <point key="canvasLocation" x="939" y="1562"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Logged In Controller-->
+        <scene sceneID="kQZ-do-jHe">
+            <objects>
+                <viewController storyboardIdentifier="LoggedInController" id="21N-Xw-IN5" customClass="LoggedInController" customModule="LadoTsivtsivadze_34" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3KU-HZ-gxb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-G0-6zW">
+                                <rect key="frame" x="130.5" y="426.5" width="153.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDz-d9-lvr">
+                                <rect key="frame" x="155" y="489.5" width="104" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="21N-Xw-IN5" eventType="touchUpInside" id="YiX-tY-WEj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OwF-8a-o5N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aDz-d9-lvr" firstAttribute="centerX" secondItem="3KU-HZ-gxb" secondAttribute="centerX" id="M21-eb-2O5"/>
+                            <constraint firstItem="Gd3-G0-6zW" firstAttribute="centerY" secondItem="3KU-HZ-gxb" secondAttribute="centerY" id="bX0-XR-3dy"/>
+                            <constraint firstItem="aDz-d9-lvr" firstAttribute="top" secondItem="Gd3-G0-6zW" secondAttribute="bottom" constant="20" id="c3I-QR-2Bt"/>
+                            <constraint firstItem="Gd3-G0-6zW" firstAttribute="centerX" secondItem="3KU-HZ-gxb" secondAttribute="centerX" id="kc8-fo-zL4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L3J-Jk-Jhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="1562"/>
+        </scene>
+        <!--Tabbar Controller-->
         <scene sceneID="tIU-GI-qZB">
             <objects>
-                <tabBarController id="2BC-l1-lee" sceneMemberID="viewController">
+                <tabBarController id="2BC-l1-lee" customClass="TabbarController" customModule="LadoTsivtsivadze_34" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h9k-Yz-Ep6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -274,7 +313,7 @@
         <scene sceneID="BMc-mx-Cz3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ogq-oc-1wg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" image="person.circle" catalog="system" id="EFa-2r-Ve6"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="User" image="person.circle" catalog="system" id="EFa-2r-Ve6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b9C-t2-9Vm">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

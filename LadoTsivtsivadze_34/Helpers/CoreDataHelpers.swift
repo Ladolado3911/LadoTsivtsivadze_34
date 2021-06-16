@@ -33,6 +33,7 @@ class LocalManager {
         return entities
     }
     
+    // this user is current user
     var loggedInUser: User? {
         guard let userObject = userObject else { return nil }
         guard let entities = getEntities(managedObject: userObject) else { return nil }
@@ -46,6 +47,18 @@ class LocalManager {
     }
     
     private init() {}
+    
+    func logInUser(inputUsername username: String, inputPassword pass: String, completion: @escaping () -> Void) {
+        let user = users!.filter { $0.username == username && $0.password == pass }
+        if user.count != 1 {
+            print("User does not exist")
+        }
+        else {
+            let user = getUser(byUsername: username)
+            user!.isLoggedIn = true
+            completion()
+        }
+    }
     
     func createUserObject(username name: String, password pass: String) {
         guard let entity = userObject else { return }

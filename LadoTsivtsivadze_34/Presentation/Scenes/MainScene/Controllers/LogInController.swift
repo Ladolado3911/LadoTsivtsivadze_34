@@ -17,6 +17,15 @@ class LogInController: UIViewController {
         return vc!
     }()
     
+    private var loggedInController: LoggedInController = {
+        let vc = getController(storyboardID: .main, controllerID: .loggedIn) as? LoggedInController
+        return vc!
+    }()
+    
+    override func loadView() {
+        super.loadView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +33,12 @@ class LogInController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-        
+        if userNameField.text == "" || passwordField.text == "" {
+            return
+        }
+        LocalManager.shared.logInUser(inputUsername: userNameField.text!, inputPassword: passwordField.text!) {
+            pushController(from: self, to: self.loggedInController, method: .withoutBackItem)
+        }
         
     }
     
