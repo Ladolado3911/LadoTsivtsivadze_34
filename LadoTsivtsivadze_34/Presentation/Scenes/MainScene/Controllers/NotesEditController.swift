@@ -38,18 +38,25 @@ class NotesEditController: UIViewController {
     
     @IBAction func onFinish(_ sender: UIButton) {
         
-        LocalManager.shared.createNoteObject(title: titleTextView.text, text: noteTextView.text)
+        //LocalManager.shared.createNoteObject(title: titleTextView.text, text: noteTextView.text)
         
         let user = LocalManager.shared.loggedInUser
-        let note = LocalManager.shared.getNote(byTitle: titleTextView.text)
         
-        print(user?.username)
-        print(note?.title)
         
-        user!.notes = NSSet(object: note)
+//        print(user?.username)
+//        print(note?.title)
+        if let note = LocalManager.shared.testMakeNote(title: titleTextView.text, text: noteTextView.text) {
+            user!.addToNotes(note)
+            print("added")
+        }
+        else {
+            print("could not add")
+        }
         
+        let testData = LocalManager.shared.getUserNotes(user: user!)!.map { $0.title }
+        print(testData)
         //print(LocalManager.shared.notes!.map { $0.title })
-        print(LocalManager.shared.getUserNotes(user: user!)!)
+
     
         
         //popController(from: self, method: .withBackItem)

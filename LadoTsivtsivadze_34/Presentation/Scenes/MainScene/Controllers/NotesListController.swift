@@ -13,11 +13,13 @@ class NotesListController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var newNoteButton: UIBarButtonItem!
     
-    lazy var data: [Note]? = {
+    var data: [Note]?  {
         let loggedInUser = LocalManager.shared.loggedInUser
         let userNotes = loggedInUser?.notes?.allObjects as? [Note]
-        return userNotes
-    }()
+        let testData = LocalManager.shared.getUserNotes(user: loggedInUser!)
+        print(testData)
+        return testData
+    }
     
     lazy var notesEditController: NotesEditController = {
         let vc = getController(storyboardID: .main, controllerID: .notesEdit) as? NotesEditController
@@ -32,11 +34,15 @@ class NotesListController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tblView.reloadData()
         
         if let loggedInUser = LocalManager.shared.loggedInUser {
             tblView.isHidden = false
             newNoteButton.isEnabled = true
 //            print(LocalManager.shared.getUserNotes(user: LocalManager.shared.loggedInUser!)!)
+            let loggedInUser = LocalManager.shared.loggedInUser
+            let testData = LocalManager.shared.getUserNotes(user: loggedInUser!)!.map { $0.title }
+            //print(testData)
         }
         else {
             tblView.isHidden = true

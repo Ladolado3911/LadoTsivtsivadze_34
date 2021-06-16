@@ -83,6 +83,15 @@ class LocalManager {
         }
     }
     
+    func testMakeNote(title ttl: String, text txt: String) -> Note? {
+        guard let context = context else { return nil }
+        let note = Note(context: context)
+        note.title = ttl
+        note.text = txt
+        
+        return note
+    }
+    
     func logInUser(inputUsername username: String, inputPassword pass: String, completion: @escaping () -> Void) {
         let user = users!.filter { $0.username == username && $0.password == pass }
         if user.count != 1 {
