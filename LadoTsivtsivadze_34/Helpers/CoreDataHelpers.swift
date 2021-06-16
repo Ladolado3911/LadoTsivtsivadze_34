@@ -65,4 +65,20 @@ class LocalManager {
             return nil
         }
     }
+    
+    func getUser(byUsername name: String) -> NSManagedObject? {
+        guard let users = users else { return nil }
+        for a in users {
+            if a.value(forKey: name) as? String == nil {
+                return nil
+            }
+        }
+        let user = users.filter { $0.value(forKeyPath: name) as? String == name }
+        if user.count != 1 {
+            return nil
+        }
+        else {
+            return user[0]
+        }
+    }
 }
