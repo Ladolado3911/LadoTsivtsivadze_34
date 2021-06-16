@@ -114,6 +114,7 @@
 		246DDA922679E6D100057B83 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				246DDAA62679F19100057B83 /* View */,
 				246DDAA12679F01900057B83 /* Structures */,
 				246DDA7E2679E68E00057B83 /* Main.storyboard */,
 				246DDA932679E6DA00057B83 /* Controllers */,
@@ -148,6 +149,21 @@
 				246DDAA22679F02900057B83 /* EditingMode.swift */,
 			);
 			path = Structures;
+			sourceTree = "<group>";
+		};
+		246DDAA62679F19100057B83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				246DDAA72679F19800057B83 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		246DDAA72679F19800057B83 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

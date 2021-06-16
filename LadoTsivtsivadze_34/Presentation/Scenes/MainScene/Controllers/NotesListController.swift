@@ -11,6 +11,11 @@ class NotesListController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
     
+    lazy var notesEditController: NotesEditController = {
+        let vc = getController(storyboardID: .main, controllerID: .notesEdit) as? NotesEditController
+        return vc!
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -20,6 +25,12 @@ class NotesListController: UIViewController {
     func configTableView() {
         tblView.dataSource = self
         tblView.delegate = self
+    }
+    
+    @IBAction func newNote(_ sender: UIBarButtonItem) {
+        let vc = notesEditController
+        vc.editingMode = .newNote
+        pushController(from: self, to: vc, method: .withBackItem)
     }
 }
 
@@ -31,7 +42,6 @@ extension NotesListController: Table {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         UITableViewCell()
     }
-    
-    
 }
+
 

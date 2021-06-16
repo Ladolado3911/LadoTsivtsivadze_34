@@ -30,7 +30,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HqX-ZL-Stx" secondAttribute="trailing" constant="20" id="w2d-uT-yBF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notes" id="NwD-hU-IjE"/>
+                    <navigationItem key="navigationItem" title="Notes" id="NwD-hU-IjE">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="d7H-bG-fOd">
+                            <connections>
+                                <action selector="newNote:" destination="BYZ-38-t0r" id="uN8-Tq-0Ln"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tblView" destination="HqX-ZL-Stx" id="fFz-xe-g1g"/>
                     </connections>
