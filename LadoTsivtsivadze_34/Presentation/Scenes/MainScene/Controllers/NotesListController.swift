@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NotesListController: UIViewController {
     
@@ -19,6 +20,8 @@ class NotesListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        
+        print(LocalManager.shared.users)
     }
 
 
@@ -26,6 +29,15 @@ class NotesListController: UIViewController {
         tblView.dataSource = self
         tblView.delegate = self
     }
+    
+    func save() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let container = appDelegate.persistentContainer
+        let context = container.viewContext
+        guard let description = NSEntityDescription.entity(forEntityName: "User", in: context) else { return }
+        let obj = NSManagedObject(entity: description, insertInto: context)
+    }
+    
     
     @IBAction func newNote(_ sender: UIBarButtonItem) {
         let vc = notesEditController
