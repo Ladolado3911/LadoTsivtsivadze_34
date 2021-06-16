@@ -11,6 +11,11 @@ class RegisterController: UIViewController {
 
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+//
+//  private var logInController: LogInController = {
+//        let vc = getController(storyboardID: .main, controllerID: .logIn) as? LogInController
+//        return vc!
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +24,10 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
-//        LocalManager.shared.createUserObject(username: userNameField.text!, password: passwordField.text!)
+        LocalManager.shared.createUserObject(username: userNameField.text!, password: passwordField.text!)
+        popController(from: self, method: .withBackItem)
 //        print(LocalManager.shared.getUser(byUsername: "123"))
 //        print(LocalManager.shared.getUser(byUsername: "also"))
 //        print(LocalManager.shared.getUser(byUsername: "unknown"))
-        LocalManager.shared.users!.map { print($0.username) }
     }
 }

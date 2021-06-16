@@ -176,16 +176,26 @@
                                     <action selector="logInButton:" destination="bli-2N-heW" eventType="touchUpInside" id="duq-LK-9IY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRZ-2z-2Ie">
+                                <rect key="frame" x="20" y="568" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Go To Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="bli-2N-heW" eventType="touchUpInside" id="Z9H-XE-nbg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aDJ-SV-myt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aDJ-SV-myt" firstAttribute="trailing" secondItem="9u2-uU-xZS" secondAttribute="trailing" constant="20" id="1kK-dr-NFn"/>
+                            <constraint firstItem="nRZ-2z-2Ie" firstAttribute="leading" secondItem="aDJ-SV-myt" secondAttribute="leading" constant="20" id="JIL-9A-Zlg"/>
                             <constraint firstItem="aDJ-SV-myt" firstAttribute="trailing" secondItem="9zy-oI-bzE" secondAttribute="trailing" constant="20" id="K5S-ft-tRY"/>
                             <constraint firstItem="9u2-uU-xZS" firstAttribute="leading" secondItem="aDJ-SV-myt" secondAttribute="leading" constant="20" id="KF2-Du-lGg"/>
                             <constraint firstItem="HJI-B4-0si" firstAttribute="top" secondItem="aDJ-SV-myt" secondAttribute="top" constant="40" id="MhD-Nx-KGQ"/>
                             <constraint firstItem="HJI-B4-0si" firstAttribute="leading" secondItem="aDJ-SV-myt" secondAttribute="leading" constant="20" id="N6j-Fz-jD1"/>
                             <constraint firstItem="9zy-oI-bzE" firstAttribute="top" secondItem="Ite-WU-xoD" secondAttribute="bottom" constant="40" id="P7O-Ol-CNd"/>
+                            <constraint firstItem="nRZ-2z-2Ie" firstAttribute="top" secondItem="c5r-0W-cSL" secondAttribute="bottom" constant="60" id="QIi-9G-jSq"/>
                             <constraint firstItem="aDJ-SV-myt" firstAttribute="trailing" secondItem="c5r-0W-cSL" secondAttribute="trailing" constant="20" id="R93-25-FaZ"/>
                             <constraint firstItem="9u2-uU-xZS" firstAttribute="top" secondItem="9zy-oI-bzE" secondAttribute="bottom" constant="20" id="RNz-OI-7bY"/>
                             <constraint firstItem="aDJ-SV-myt" firstAttribute="trailing" secondItem="Ite-WU-xoD" secondAttribute="trailing" constant="20" id="WGT-dl-tQC"/>
@@ -194,6 +204,7 @@
                             <constraint firstItem="Ite-WU-xoD" firstAttribute="top" secondItem="HJI-B4-0si" secondAttribute="bottom" constant="20" id="frC-c0-HTI"/>
                             <constraint firstItem="c5r-0W-cSL" firstAttribute="top" secondItem="9u2-uU-xZS" secondAttribute="bottom" constant="40" id="kuq-lx-nfL"/>
                             <constraint firstItem="9zy-oI-bzE" firstAttribute="leading" secondItem="aDJ-SV-myt" secondAttribute="leading" constant="20" id="kzn-im-b05"/>
+                            <constraint firstItem="aDJ-SV-myt" firstAttribute="trailing" secondItem="nRZ-2z-2Ie" secondAttribute="trailing" constant="20" id="oEK-Mi-rL9"/>
                             <constraint firstItem="aDJ-SV-myt" firstAttribute="trailing" secondItem="HJI-B4-0si" secondAttribute="trailing" constant="20" id="vxW-ag-E7e"/>
                         </constraints>
                     </view>
@@ -218,7 +229,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="rdg-md-bio" kind="relationship" relationship="viewControllers" id="ePH-sN-Nmw"/>
-                        <segue destination="761-mF-RhW" kind="relationship" relationship="viewControllers" id="vsm-D4-CsR"/>
+                        <segue destination="ogq-oc-1wg" kind="relationship" relationship="viewControllers" id="he1-bo-KQO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY8-Vn-0r3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -278,21 +289,22 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="835.71428571428567"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kI7-nK-o7m">
+        <!--User-->
+        <scene sceneID="BMc-mx-Cz3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cKN-yf-0hc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ogq-oc-1wg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person.circle" catalog="system" id="EFa-2r-Ve6"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="QIa-jq-4CL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b9C-t2-9Vm">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bli-2N-heW" kind="relationship" relationship="rootViewController" id="TTU-2x-ukl"/>
+                        <segue destination="bli-2N-heW" kind="relationship" relationship="rootViewController" id="85M-Uw-Zhq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K2f-o4-7AM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3r1-GW-IuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29" y="1562"/>
         </scene>
