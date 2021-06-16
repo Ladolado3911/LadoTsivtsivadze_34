@@ -38,6 +38,20 @@ class NotesEditController: UIViewController {
     
     @IBAction func onFinish(_ sender: UIButton) {
         
-        popController(from: self, method: .withBackItem)
+        LocalManager.shared.createNoteObject(title: titleTextView.text, text: noteTextView.text)
+        
+        let user = LocalManager.shared.loggedInUser
+        let note = LocalManager.shared.getNote(byTitle: titleTextView.text)
+        
+        print(user?.username)
+        print(note?.title)
+        
+        user!.notes = NSSet(object: note)
+        
+        //print(LocalManager.shared.notes!.map { $0.title })
+        print(LocalManager.shared.getUserNotes(user: user!)!)
+    
+        
+        //popController(from: self, method: .withBackItem)
     }
 }

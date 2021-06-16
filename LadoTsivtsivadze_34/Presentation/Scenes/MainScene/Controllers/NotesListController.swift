@@ -15,7 +15,7 @@ class NotesListController: UIViewController {
     
     lazy var data: [Note]? = {
         let loggedInUser = LocalManager.shared.loggedInUser
-        let userNotes = loggedInUser?.relationship?.allObjects as? [Note]
+        let userNotes = loggedInUser?.notes?.allObjects as? [Note]
         return userNotes
     }()
     
@@ -36,6 +36,7 @@ class NotesListController: UIViewController {
         if let loggedInUser = LocalManager.shared.loggedInUser {
             tblView.isHidden = false
             newNoteButton.isEnabled = true
+//            print(LocalManager.shared.getUserNotes(user: LocalManager.shared.loggedInUser!)!)
         }
         else {
             tblView.isHidden = true
