@@ -33,6 +33,18 @@ class LocalManager {
         return entities
     }
     
+    var loggedInUser: User? {
+        guard let userObject = userObject else { return nil }
+        guard let entities = getEntities(managedObject: userObject) else { return nil }
+        let loggedInUser = entities.filter { $0.isLoggedIn }
+        if loggedInUser.count != 1 {
+            return nil
+        }
+        else {
+            return loggedInUser[0]
+        }
+    }
+    
     private init() {}
     
     func createUserObject(username name: String, password pass: String) {

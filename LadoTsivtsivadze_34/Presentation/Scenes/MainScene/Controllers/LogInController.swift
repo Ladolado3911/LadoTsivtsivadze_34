@@ -27,8 +27,8 @@ class LogInController: UIViewController {
         
         
     }
+    
     @IBAction func signUpButton(_ sender: UIButton) {
         pushController(from: self, to: registerController, method: .withBackItem)
-        
     }
 }

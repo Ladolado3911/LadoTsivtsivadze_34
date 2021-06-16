@@ -24,6 +24,10 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
+        if userNameField.text == "" || passwordField.text == "" {
+            return
+        }
+        
         LocalManager.shared.createUserObject(username: userNameField.text!, password: passwordField.text!)
         popController(from: self, method: .withBackItem)
 //        print(LocalManager.shared.getUser(byUsername: "123"))
