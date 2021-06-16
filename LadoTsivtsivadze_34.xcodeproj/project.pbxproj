@@ -9,23 +9,39 @@
 /* Begin PBXBuildFile section */
 		246DDA792679E68E00057B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA782679E68E00057B83 /* AppDelegate.swift */; };
 		246DDA7B2679E68E00057B83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA7A2679E68E00057B83 /* SceneDelegate.swift */; };
-		246DDA7D2679E68E00057B83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA7C2679E68E00057B83 /* ViewController.swift */; };
+		246DDA7D2679E68E00057B83 /* NotesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA7C2679E68E00057B83 /* NotesListController.swift */; };
 		246DDA802679E68E00057B83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246DDA7E2679E68E00057B83 /* Main.storyboard */; };
 		246DDA832679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA812679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodeld */; };
 		246DDA852679E68F00057B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246DDA842679E68F00057B83 /* Assets.xcassets */; };
 		246DDA882679E68F00057B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246DDA862679E68F00057B83 /* LaunchScreen.storyboard */; };
+		246DDA952679EA5100057B83 /* NotesEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA942679EA5100057B83 /* NotesEditController.swift */; };
+		246DDA972679EA6400057B83 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA962679EA6400057B83 /* LogInController.swift */; };
+		246DDA992679EA7500057B83 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA982679EA7500057B83 /* RegisterController.swift */; };
+		246DDA9D2679EAA800057B83 /* IDs2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA9B2679EAA800057B83 /* IDs2.swift */; };
+		246DDA9E2679EAA800057B83 /* ControllerHelpers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA9C2679EAA800057B83 /* ControllerHelpers2.swift */; };
+		246DDAA02679EF0100057B83 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA9F2679EF0100057B83 /* TabbarController.swift */; };
+		246DDAA32679F02900057B83 /* EditingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA22679F02900057B83 /* EditingMode.swift */; };
+		246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA42679F0E100057B83 /* TypeAliases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		246DDA752679E68E00057B83 /* LadoTsivtsivadze_34.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadoTsivtsivadze_34.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246DDA782679E68E00057B83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246DDA7A2679E68E00057B83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		246DDA7C2679E68E00057B83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		246DDA7C2679E68E00057B83 /* NotesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListController.swift; sourceTree = "<group>"; };
 		246DDA7F2679E68E00057B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		246DDA822679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LadoTsivtsivadze_34.xcdatamodel; sourceTree = "<group>"; };
 		246DDA842679E68F00057B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		246DDA872679E68F00057B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		246DDA892679E68F00057B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		246DDA942679EA5100057B83 /* NotesEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEditController.swift; sourceTree = "<group>"; };
+		246DDA962679EA6400057B83 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		246DDA982679EA7500057B83 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		246DDA9B2679EAA800057B83 /* IDs2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IDs2.swift; path = ../../../Chesstrainer2/ChessTrainer2/Helpers/IDs2.swift; sourceTree = "<group>"; };
+		246DDA9C2679EAA800057B83 /* ControllerHelpers2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllerHelpers2.swift; path = ../../../Chesstrainer2/ChessTrainer2/Helpers/ControllerHelpers2.swift; sourceTree = "<group>"; };
+		246DDA9F2679EF0100057B83 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		246DDAA22679F02900057B83 /* EditingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingMode.swift; sourceTree = "<group>"; };
+		246DDAA42679F0E100057B83 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeAliases.swift; path = ../../Chesstrainer2/ChessTrainer2/TypeAliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,8 @@
 		246DDA772679E68E00057B83 /* LadoTsivtsivadze_34 */ = {
 			isa = PBXGroup;
 			children = (
+				246DDAA42679F0E100057B83 /* TypeAliases.swift */,
+				246DDA9A2679EA7D00057B83 /* Helpers */,
 				246DDA902679E6B400057B83 /* Presentation */,
 				246DDA8F2679E6A400057B83 /* App */,
 				246DDA842679E68F00057B83 /* Assets.xcassets */,
@@ -96,6 +114,7 @@
 		246DDA922679E6D100057B83 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				246DDAA12679F01900057B83 /* Structures */,
 				246DDA7E2679E68E00057B83 /* Main.storyboard */,
 				246DDA932679E6DA00057B83 /* Controllers */,
 			);
@@ -105,9 +124,30 @@
 		246DDA932679E6DA00057B83 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				246DDA7C2679E68E00057B83 /* ViewController.swift */,
+				246DDA7C2679E68E00057B83 /* NotesListController.swift */,
+				246DDA942679EA5100057B83 /* NotesEditController.swift */,
+				246DDA962679EA6400057B83 /* LogInController.swift */,
+				246DDA982679EA7500057B83 /* RegisterController.swift */,
+				246DDA9F2679EF0100057B83 /* TabbarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		246DDA9A2679EA7D00057B83 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				246DDA9C2679EAA800057B83 /* ControllerHelpers2.swift */,
+				246DDA9B2679EAA800057B83 /* IDs2.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		246DDAA12679F01900057B83 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				246DDAA22679F02900057B83 /* EditingMode.swift */,
+			);
+			path = Structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */,
 				246DDA832679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodeld in Sources */,
-				246DDA7D2679E68E00057B83 /* ViewController.swift in Sources */,
+				246DDA972679EA6400057B83 /* LogInController.swift in Sources */,
+				246DDA7D2679E68E00057B83 /* NotesListController.swift in Sources */,
+				246DDAA02679EF0100057B83 /* TabbarController.swift in Sources */,
+				246DDA992679EA7500057B83 /* RegisterController.swift in Sources */,
+				246DDA9D2679EAA800057B83 /* IDs2.swift in Sources */,
+				246DDA9E2679EAA800057B83 /* ControllerHelpers2.swift in Sources */,
+				246DDAA32679F02900057B83 /* EditingMode.swift in Sources */,
+				246DDA952679EA5100057B83 /* NotesEditController.swift in Sources */,
 				246DDA792679E68E00057B83 /* AppDelegate.swift in Sources */,
 				246DDA7B2679E68E00057B83 /* SceneDelegate.swift in Sources */,
 			);

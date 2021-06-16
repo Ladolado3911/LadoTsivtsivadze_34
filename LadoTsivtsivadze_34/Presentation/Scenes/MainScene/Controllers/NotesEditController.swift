@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NotesEditController.swift
 //  LadoTsivtsivadze_34
 //
 //  Created by lado tsivtsivadze on 6/16/21.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NotesEditController: UIViewController {
+    
+    var editingMode: EditingMode?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+
     }
-
-
 }
-
