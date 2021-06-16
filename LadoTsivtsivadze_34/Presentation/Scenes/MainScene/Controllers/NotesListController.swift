@@ -13,7 +13,11 @@ class NotesListController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var newNoteButton: UIBarButtonItem!
     
-    var data: [Note]?
+    lazy var data: [Note]? = {
+        let loggedInUser = LocalManager.shared.loggedInUser
+        let userNotes = loggedInUser?.relationship?.allObjects as? [Note]
+        return userNotes
+    }()
     
     lazy var notesEditController: NotesEditController = {
         let vc = getController(storyboardID: .main, controllerID: .notesEdit) as? NotesEditController

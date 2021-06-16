@@ -307,22 +307,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zac-Lh-P6a">
-                                <rect key="frame" x="20" y="257" width="374" height="585"/>
+                                <rect key="frame" x="20" y="257" width="374" height="523"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le2-mO-iI9">
+                                <rect key="frame" x="20" y="800" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="onFinish:" destination="56Y-v7-3YH" eventType="touchUpInside" id="XdZ-Bs-eZR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yWw-fX-uFs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zYU-Ah-iI1" firstAttribute="top" secondItem="D2p-4E-gVy" secondAttribute="bottom" constant="20" id="3Yf-1f-H17"/>
                             <constraint firstItem="D2p-4E-gVy" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="3hr-ER-xKq"/>
-                            <constraint firstItem="yWw-fX-uFs" firstAttribute="bottom" secondItem="zac-Lh-P6a" secondAttribute="bottom" constant="20" id="HWR-mz-NXs"/>
+                            <constraint firstItem="yWw-fX-uFs" firstAttribute="trailing" secondItem="le2-mO-iI9" secondAttribute="trailing" constant="20" id="9Ux-yq-YDJ"/>
+                            <constraint firstItem="le2-mO-iI9" firstAttribute="top" secondItem="zac-Lh-P6a" secondAttribute="bottom" constant="20" id="EXN-d0-6ww"/>
                             <constraint firstItem="AAh-SX-Wx4" firstAttribute="top" secondItem="zYU-Ah-iI1" secondAttribute="bottom" constant="20" id="INZ-H7-MTL"/>
                             <constraint firstItem="yWw-fX-uFs" firstAttribute="trailing" secondItem="zac-Lh-P6a" secondAttribute="trailing" constant="20" id="NaO-ba-EX4"/>
                             <constraint firstItem="zac-Lh-P6a" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="bkW-ef-lGb"/>
+                            <constraint firstItem="yWw-fX-uFs" firstAttribute="bottom" secondItem="le2-mO-iI9" secondAttribute="bottom" constant="20" id="cT5-FN-7iZ"/>
+                            <constraint firstItem="le2-mO-iI9" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="e3X-vz-VKN"/>
                             <constraint firstItem="D2p-4E-gVy" firstAttribute="top" secondItem="yWw-fX-uFs" secondAttribute="top" constant="20" id="eBb-AM-tP7"/>
                             <constraint firstItem="yWw-fX-uFs" firstAttribute="trailing" secondItem="zYU-Ah-iI1" secondAttribute="trailing" constant="20" id="fp0-1o-Ewy"/>
                             <constraint firstItem="AAh-SX-Wx4" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="mcS-vs-aVX"/>

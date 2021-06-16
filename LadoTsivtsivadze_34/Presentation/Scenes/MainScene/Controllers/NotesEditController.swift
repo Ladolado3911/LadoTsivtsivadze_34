@@ -10,6 +10,7 @@ import UIKit
 class NotesEditController: UIViewController {
     
     var editingMode: EditingMode?
+    var controllerPointer: NotesListController?
     
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var noteTextView: UITextView!
@@ -33,5 +34,10 @@ class NotesEditController: UIViewController {
         default:
             title = "No Note"
         }
+    }
+    
+    @IBAction func onFinish(_ sender: UIButton) {
+        
+        popController(from: self, method: .withBackItem)
     }
 }
