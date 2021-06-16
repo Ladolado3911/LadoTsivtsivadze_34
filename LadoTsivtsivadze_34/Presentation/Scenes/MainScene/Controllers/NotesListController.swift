@@ -93,6 +93,7 @@ extension NotesListController: Table {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = notesEditController
         vc.editingMode = .editNote
+        vc.note = data![indexPath.row]
         pushController(from: self, to: vc, method: .withBackItem)
     }
 }

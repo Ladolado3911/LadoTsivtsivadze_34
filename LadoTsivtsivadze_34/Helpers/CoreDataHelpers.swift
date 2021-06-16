@@ -13,26 +13,26 @@ class LocalManager {
     
     static var shared = LocalManager()
     
-    private lazy var context: NSManagedObjectContext? = {
+    var context: NSManagedObjectContext? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         let container = appDelegate.persistentContainer
         let context = container.viewContext
         return context
-    }()
+    }
     
-    lazy var userObject: NSManagedObject? = {
+    var userObject: NSManagedObject? {
         guard let context = context else { return nil }
         guard let description = NSEntityDescription.entity(forEntityName: "User", in: context) else { return nil }
         let obj = NSManagedObject(entity: description, insertInto: context)
         return obj
-    }()
+    }
     
-    lazy var noteObject: NSManagedObject? = {
+    var noteObject: NSManagedObject? {
         guard let context = context else { return nil }
         guard let description = NSEntityDescription.entity(forEntityName: "Note", in: context) else { return nil }
         let obj = NSManagedObject(entity: description, insertInto: context)
         return obj
-    }()
+    }
     
     var users: [User]? {
         guard let userObject = userObject else { return nil }

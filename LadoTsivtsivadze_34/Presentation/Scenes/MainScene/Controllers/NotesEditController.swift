@@ -11,6 +11,7 @@ class NotesEditController: UIViewController {
     
     var editingMode: EditingMode?
     var controllerPointer: NotesListController?
+    var note: Note?
     
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var noteTextView: UITextView!
@@ -25,40 +26,54 @@ class NotesEditController: UIViewController {
         setTitle()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        clear()
+    }
+    
     func setTitle() {
         switch editingMode {
         case .newNote:
             title = "New Note"
         case .editNote:
             title = "Edit Note"
+            setNoteIfNeeded()
         default:
             title = "No Note"
         }
     }
     
-    @IBAction func onFinish(_ sender: UIButton) {
-        
-        //LocalManager.shared.createNoteObject(title: titleTextView.text, text: noteTextView.text)
-        
-        let user = LocalManager.shared.loggedInUser
-        
-        
-//        print(user?.username)
-//        print(note?.title)
-        if let note = LocalManager.shared.testMakeNote(title: titleTextView.text, text: noteTextView.text) {
-            user!.addToNotes(note)
-            print("added")
-        }
-        else {
-            print("could not add")
-        }
-        
-        let testData = LocalManager.shared.getUserNotes(user: user!)!.map { $0.title }
-        print(testData)
-        //print(LocalManager.shared.notes!.map { $0.title })
-
+    func setNoteIfNeeded() {
+        guard let note = note else { return }
+        titleTextView.text = note.title
+        noteTextView.text = note.text
+    }
     
-        
-        //popController(from: self, method: .withBackItem)
+    func clear() {
+        titleTextView.text = ""
+        noteTextView.text = ""
+    }
+    
+    @IBAction func onFinish(_ sender: UIButton) {
+        let user = LocalManager.shared.loggedInUser
+        switch editingMode {
+        case .newNote:
+            if let note = LocalManager.shared.testMakeNote(title: titleTextView.text, text: noteTextView.text) {
+                user!.addToNotes(note)
+                print("added")
+            }
+            else {
+                print("could not add")
+            }
+            
+            let testData = LocalManager.shared.getUserNotes(user: user!)!.map { $0.title }
+            print(testData)
+            //print(LocalManager.shared.notes!.map { $0.title })
+        case .editNote:
+            break
+        default:
+            break
+        }
+        popController(from: self, method: .withBackItem)
     }
 }
