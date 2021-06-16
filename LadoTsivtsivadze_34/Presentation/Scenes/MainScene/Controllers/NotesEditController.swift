@@ -53,7 +53,7 @@ class NotesEditController: UIViewController {
         titleTextView.text = ""
         noteTextView.text = ""
     }
-    
+
     @IBAction func onFinish(_ sender: UIButton) {
         let user = LocalManager.shared.loggedInUser
         switch editingMode {
@@ -70,7 +70,16 @@ class NotesEditController: UIViewController {
             print(testData)
             //print(LocalManager.shared.notes!.map { $0.title })
         case .editNote:
-            break
+            guard let note = note else { return }
+            user!.removeFromNotes(note)
+            if let newNote = LocalManager.shared.testMakeNote(title: titleTextView.text, text: noteTextView.text) {
+                user!.addToNotes(newNote)
+                print("edited")
+            }
+            else {
+                print("could not edit")
+            }
+            
         default:
             break
         }

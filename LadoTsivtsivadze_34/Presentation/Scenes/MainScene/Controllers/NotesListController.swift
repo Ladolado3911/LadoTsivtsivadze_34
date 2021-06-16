@@ -96,6 +96,17 @@ extension NotesListController: Table {
         vc.note = data![indexPath.row]
         pushController(from: self, to: vc, method: .withBackItem)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive,
+                                        title: "delete") {_,_,_ in
+            let user = LocalManager.shared.loggedInUser
+            user!.removeFromNotes(self.data![indexPath.row])
+            tableView.reloadData()
+        }
+        let config = UISwipeActionsConfiguration(actions: [action])
+        return config
+    }
 }
 
 
