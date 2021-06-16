@@ -13,7 +13,18 @@ class NotesEditController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle()
 
-
+    }
+    
+    func setTitle() {
+        switch editingMode {
+        case .newNote:
+            title = "New Note"
+        case .editNote:
+            title = "Edit Note"
+        default:
+            title = "No Note"
+        }
     }
 }
