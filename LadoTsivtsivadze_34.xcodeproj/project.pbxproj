@@ -24,6 +24,8 @@
 		246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA42679F0E100057B83 /* TypeAliases.swift */; };
 		246DDAA9267A093800057B83 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA8267A093800057B83 /* CoreDataHelpers.swift */; };
 		246DDAAD267A25C100057B83 /* LoggedInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAAC267A25C100057B83 /* LoggedInController.swift */; };
+		246DDAB0267A431B00057B83 /* noteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAAE267A431B00057B83 /* noteCell.swift */; };
+		246DDAB1267A431B00057B83 /* noteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246DDAAF267A431B00057B83 /* noteCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		246DDAA42679F0E100057B83 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeAliases.swift; path = ../../Chesstrainer2/ChessTrainer2/TypeAliases.swift; sourceTree = "<group>"; };
 		246DDAA8267A093800057B83 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		246DDAAC267A25C100057B83 /* LoggedInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInController.swift; sourceTree = "<group>"; };
+		246DDAAE267A431B00057B83 /* noteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteCell.swift; sourceTree = "<group>"; };
+		246DDAAF267A431B00057B83 /* noteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noteCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 		246DDAA72679F19800057B83 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				246DDAAE267A431B00057B83 /* noteCell.swift */,
+				246DDAAF267A431B00057B83 /* noteCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				246DDA882679E68F00057B83 /* LaunchScreen.storyboard in Resources */,
 				246DDA852679E68F00057B83 /* Assets.xcassets in Resources */,
 				246DDA802679E68E00057B83 /* Main.storyboard in Resources */,
+				246DDAB1267A431B00057B83 /* noteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +251,7 @@
 			files = (
 				246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */,
 				246DDA832679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodeld in Sources */,
+				246DDAB0267A431B00057B83 /* noteCell.swift in Sources */,
 				246DDA972679EA6400057B83 /* LogInController.swift in Sources */,
 				246DDA7D2679E68E00057B83 /* NotesListController.swift in Sources */,
 				246DDAA02679EF0100057B83 /* TabbarController.swift in Sources */,

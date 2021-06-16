@@ -13,6 +13,8 @@ class NotesListController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var newNoteButton: UIBarButtonItem!
     
+    var data: [Note]?
+    
     lazy var notesEditController: NotesEditController = {
         let vc = getController(storyboardID: .main, controllerID: .notesEdit) as? NotesEditController
         return vc!
@@ -47,17 +49,11 @@ class NotesListController: UIViewController {
     func configTableView() {
         tblView.dataSource = self
         tblView.delegate = self
+        
+        let nib = UINib(nibName: "noteCell", bundle: nil)
+        tblView.register(nib, forCellReuseIdentifier: "noteCell")
     }
-    
-    func save() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let container = appDelegate.persistentContainer
-        let context = container.viewContext
-        guard let description = NSEntityDescription.entity(forEntityName: "User", in: context) else { return }
-        let obj = NSManagedObject(entity: description, insertInto: context)
-    }
-    
-    
+
     @IBAction func newNote(_ sender: UIBarButtonItem) {
         let vc = notesEditController
         vc.editingMode = .newNote
@@ -67,11 +63,26 @@ class NotesListController: UIViewController {
 
 extension NotesListController: Table {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        if let data = data {
+            return data.count
+        }
+        else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell") as? noteCell
+        guard let data = data else { return noteCell() }
+        
+        cell!.title = data[indexPath.row].title
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = notesEditController
+        vc.editingMode = .editNote
+        pushController(from: self, to: vc, method: .withBackItem)
     }
 }
 

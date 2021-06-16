@@ -10,11 +10,18 @@ import UIKit
 class NotesEditController: UIViewController {
     
     var editingMode: EditingMode?
-
+    
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var noteTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitle()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setTitle()
     }
     
     func setTitle() {

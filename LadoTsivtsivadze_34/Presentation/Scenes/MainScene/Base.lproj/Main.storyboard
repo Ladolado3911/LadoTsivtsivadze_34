@@ -283,9 +283,58 @@
                     <view key="view" contentMode="scaleToFill" id="fbu-dr-7fp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2p-4E-gVy">
+                                <rect key="frame" x="20" y="64" width="53.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zYU-Ah-iI1">
+                                <rect key="frame" x="20" y="115.5" width="374" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Rmt-YQ-pB6"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAh-SX-Wx4">
+                                <rect key="frame" x="20" y="205.5" width="58.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zac-Lh-P6a">
+                                <rect key="frame" x="20" y="257" width="374" height="585"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yWw-fX-uFs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zYU-Ah-iI1" firstAttribute="top" secondItem="D2p-4E-gVy" secondAttribute="bottom" constant="20" id="3Yf-1f-H17"/>
+                            <constraint firstItem="D2p-4E-gVy" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="3hr-ER-xKq"/>
+                            <constraint firstItem="yWw-fX-uFs" firstAttribute="bottom" secondItem="zac-Lh-P6a" secondAttribute="bottom" constant="20" id="HWR-mz-NXs"/>
+                            <constraint firstItem="AAh-SX-Wx4" firstAttribute="top" secondItem="zYU-Ah-iI1" secondAttribute="bottom" constant="20" id="INZ-H7-MTL"/>
+                            <constraint firstItem="yWw-fX-uFs" firstAttribute="trailing" secondItem="zac-Lh-P6a" secondAttribute="trailing" constant="20" id="NaO-ba-EX4"/>
+                            <constraint firstItem="zac-Lh-P6a" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="bkW-ef-lGb"/>
+                            <constraint firstItem="D2p-4E-gVy" firstAttribute="top" secondItem="yWw-fX-uFs" secondAttribute="top" constant="20" id="eBb-AM-tP7"/>
+                            <constraint firstItem="yWw-fX-uFs" firstAttribute="trailing" secondItem="zYU-Ah-iI1" secondAttribute="trailing" constant="20" id="fp0-1o-Ewy"/>
+                            <constraint firstItem="AAh-SX-Wx4" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="mcS-vs-aVX"/>
+                            <constraint firstItem="zYU-Ah-iI1" firstAttribute="leading" secondItem="yWw-fX-uFs" secondAttribute="leading" constant="20" id="rIA-yz-Cqk"/>
+                            <constraint firstItem="AAh-SX-Wx4" firstAttribute="leading" secondItem="D2p-4E-gVy" secondAttribute="leading" id="sye-HR-2P4"/>
+                            <constraint firstItem="zac-Lh-P6a" firstAttribute="top" secondItem="AAh-SX-Wx4" secondAttribute="bottom" constant="20" id="wsn-bL-JIM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteTextView" destination="zac-Lh-P6a" id="gRV-P2-ISx"/>
+                        <outlet property="titleTextView" destination="zYU-Ah-iI1" id="LSr-zQ-0xl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTM-rh-KGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -333,6 +382,9 @@
     <resources>
         <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
