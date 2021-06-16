@@ -25,13 +25,13 @@ class TabbarController: UITabBarController {
 
 extension TabbarController: UITabBarControllerDelegate {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.tag == 1 {
-            if let loggedInUser = LocalManager.shared.loggedInUser {
-                print("go to profile page or show something")
-            }
-            else {
-                print("else block")
-            }
-        }
+//        if item.tag == 1 {
+//            if let loggedInUser = LocalManager.shared.loggedInUser {
+//                print("go to profile page or show something")
+//            }
+//            else {
+//                print("else block")
+//            }
+//        }
     }
 }

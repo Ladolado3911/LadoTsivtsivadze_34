@@ -24,6 +24,13 @@ class LogInController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        if let loggedInUser = LocalManager.shared.loggedInUser {
+            print("go to profile page or show something")
+            pushController(from: self, to: loggedInController, method: .withoutBackItem)
+        }
+        else {
+            print("else block")
+        }
     }
     
     override func viewDidLoad() {
