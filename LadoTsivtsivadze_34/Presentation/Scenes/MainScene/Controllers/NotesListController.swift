@@ -21,7 +21,12 @@ class NotesListController: UIViewController {
         super.viewDidLoad()
         configTableView()
         
-        print(LocalManager.shared.users)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //print(LocalManager.shared.users)
     }
 
 

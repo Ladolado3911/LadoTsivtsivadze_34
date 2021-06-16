@@ -27,7 +27,7 @@ class LocalManager {
         return obj
     }()
     
-    var users: [NSManagedObject]? {
+    var users: [User]? {
         guard let userObject = userObject else { return nil }
         guard let entities = getEntities(managedObject: userObject) else { return nil }
         return entities
@@ -35,29 +35,30 @@ class LocalManager {
     
     private init() {}
     
-    private func createUserObject(username name: String, password pass: String) {
+    func createUserObject(username name: String, password pass: String) {
         guard let entity = userObject else { return }
         guard let context = context else { return }
 
-        entity.setValue(name, forKey: "name")
-        entity.setValue(pass, forKey: "password")
+        entity.setValue(name, forKeyPath: "username")
+        entity.setValue(pass, forKeyPath: "password")
         
         do {
             try context.save()
             print("saved")
         }
         catch {
+            print("we are here to print error")
             print(error)
         }
     }
     
-    func getEntities(managedObject obj: NSManagedObject) -> [NSManagedObject]? {
+    func getEntities(managedObject obj: NSManagedObject) -> [User]? {
         guard let context = context else { return nil }
         guard let name = obj.entity.name else { return nil }
         let request = NSFetchRequest<NSManagedObject>(entityName: name)
         
         do {
-            let entities = try context.fetch(request)
+            let entities = try context.fetch(request) as? [User]
             return entities
         }
         catch {
@@ -66,19 +67,24 @@ class LocalManager {
         }
     }
     
-    func getUser(byUsername name: String) -> NSManagedObject? {
-        guard let users = users else { return nil }
-        for a in users {
-            if a.value(forKey: name) as? String == nil {
-                return nil
-            }
+    func getUser(byUsername name: String) -> User? {
+        guard let users = users else {
+            print("first guard returned nil")
+            return nil
         }
-        let user = users.filter { $0.value(forKeyPath: name) as? String == name }
+
+        let user = users.filter { $0.username == name }
         if user.count != 1 {
+            print(user)
+            print("filtered returned nil")
             return nil
         }
         else {
             return user[0]
         }
+    }
+    
+    func addUser(username name: String, password pass: String) {
+        
     }
 }
