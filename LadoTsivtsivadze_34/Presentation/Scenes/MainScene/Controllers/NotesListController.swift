@@ -11,6 +11,7 @@ import CoreData
 class NotesListController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var newNoteButton: UIBarButtonItem!
     
     lazy var notesEditController: NotesEditController = {
         let vc = getController(storyboardID: .main, controllerID: .notesEdit) as? NotesEditController
@@ -21,6 +22,19 @@ class NotesListController: UIViewController {
         super.viewDidLoad()
         configTableView()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let loggedInUser = LocalManager.shared.loggedInUser {
+            tblView.isHidden = false
+            newNoteButton.isEnabled = true
+        }
+        else {
+            tblView.isHidden = true
+            newNoteButton.isEnabled = false
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -38,6 +38,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="newNoteButton" destination="d7H-bG-fOd" id="kfF-Pt-Fvx"/>
                         <outlet property="tblView" destination="HqX-ZL-Stx" id="fFz-xe-g1g"/>
                     </connections>
                 </viewController>
@@ -267,8 +268,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rdg-md-bio" kind="relationship" relationship="viewControllers" id="ePH-sN-Nmw"/>
-                        <segue destination="ogq-oc-1wg" kind="relationship" relationship="viewControllers" id="he1-bo-KQO"/>
+                        <segue destination="rdg-md-bio" kind="relationship" relationship="viewControllers" id="xS3-H1-dNa"/>
+                        <segue destination="ogq-oc-1wg" kind="relationship" relationship="viewControllers" id="oxa-cY-O9d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY8-Vn-0r3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

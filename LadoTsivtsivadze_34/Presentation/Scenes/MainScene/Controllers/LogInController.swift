@@ -39,6 +39,10 @@ class LogInController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     @IBAction func logInButton(_ sender: UIButton) {
         if userNameField.text == "" || passwordField.text == "" {
             return
