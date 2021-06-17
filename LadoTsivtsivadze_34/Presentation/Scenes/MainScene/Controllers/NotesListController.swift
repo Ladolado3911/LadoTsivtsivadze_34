@@ -16,6 +16,9 @@ class NotesListController: UIViewController {
     var data: [Note]?  {
         let loggedInUser = LocalManager.shared.loggedInUser
         let userNotes = loggedInUser?.notes?.allObjects as? [Note]
+        if loggedInUser == nil {
+            return nil
+        }
         let testData = LocalManager.shared.getUserNotes(user: loggedInUser!)
         print(testData)
         return testData
