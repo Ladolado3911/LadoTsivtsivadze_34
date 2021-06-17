@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245D5D8A267B04DC001A0F30 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245D5D89267B04DC001A0F30 /* TypeAliases.swift */; };
 		246DDA792679E68E00057B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA782679E68E00057B83 /* AppDelegate.swift */; };
 		246DDA7B2679E68E00057B83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA7A2679E68E00057B83 /* SceneDelegate.swift */; };
 		246DDA7D2679E68E00057B83 /* NotesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA7C2679E68E00057B83 /* NotesListController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245D5D89267B04DC001A0F30 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 		246DDA752679E68E00057B83 /* LadoTsivtsivadze_34.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadoTsivtsivadze_34.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246DDA782679E68E00057B83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246DDA7A2679E68E00057B83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		246DDA9A2679EA7D00057B83 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				245D5D89267B04DC001A0F30 /* TypeAliases.swift */,
 				246DDA9C2679EAA800057B83 /* ControllerHelpers2.swift */,
 				246DDA9B2679EAA800057B83 /* IDs2.swift */,
 				246DDAA8267A093800057B83 /* CoreDataHelpers.swift */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245D5D8A267B04DC001A0F30 /* TypeAliases.swift in Sources */,
 				246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */,
 				246DDA832679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodeld in Sources */,
 				246DDAB0267A431B00057B83 /* noteCell.swift in Sources */,
