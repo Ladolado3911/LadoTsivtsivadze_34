@@ -22,7 +22,6 @@
 		246DDA992679EA7500057B83 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA982679EA7500057B83 /* RegisterController.swift */; };
 		246DDAA02679EF0100057B83 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDA9F2679EF0100057B83 /* TabbarController.swift */; };
 		246DDAA32679F02900057B83 /* EditingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA22679F02900057B83 /* EditingMode.swift */; };
-		246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA42679F0E100057B83 /* TypeAliases.swift */; };
 		246DDAA9267A093800057B83 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAA8267A093800057B83 /* CoreDataHelpers.swift */; };
 		246DDAAD267A25C100057B83 /* LoggedInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAAC267A25C100057B83 /* LoggedInController.swift */; };
 		246DDAB0267A431B00057B83 /* noteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DDAAE267A431B00057B83 /* noteCell.swift */; };
@@ -47,7 +46,6 @@
 		246DDA982679EA7500057B83 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		246DDA9F2679EF0100057B83 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		246DDAA22679F02900057B83 /* EditingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingMode.swift; sourceTree = "<group>"; };
-		246DDAA42679F0E100057B83 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeAliases.swift; path = ../../Chesstrainer2/ChessTrainer2/TypeAliases.swift; sourceTree = "<group>"; };
 		246DDAA8267A093800057B83 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		246DDAAC267A25C100057B83 /* LoggedInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInController.swift; sourceTree = "<group>"; };
 		246DDAAE267A431B00057B83 /* noteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteCell.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 		246DDA772679E68E00057B83 /* LadoTsivtsivadze_34 */ = {
 			isa = PBXGroup;
 			children = (
-				246DDAA42679F0E100057B83 /* TypeAliases.swift */,
 				246DDA9A2679EA7D00057B83 /* Helpers */,
 				246DDA902679E6B400057B83 /* Presentation */,
 				246DDA8F2679E6A400057B83 /* App */,
@@ -253,7 +250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				245D5D8A267B04DC001A0F30 /* TypeAliases.swift in Sources */,
-				246DDAA52679F0E100057B83 /* TypeAliases.swift in Sources */,
 				246DDA832679E68E00057B83 /* LadoTsivtsivadze_34.xcdatamodeld in Sources */,
 				246DDAB0267A431B00057B83 /* noteCell.swift in Sources */,
 				246DDA972679EA6400057B83 /* LogInController.swift in Sources */,
